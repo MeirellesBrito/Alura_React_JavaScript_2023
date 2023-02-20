@@ -3,6 +3,13 @@ import './CampoTexto.css'
 
 // Definição da componente CampoTexto como uma função que recebe um objeto props como parâmetro
 const CampoTexto = (props) => {
+    
+    let valor = "fernando Meirelles"
+
+    const aoDigitado = (evento) => {
+        valor= evento.target.value
+        console.log(valor)
+    }
 
     // Retorno da componente, que consiste em um div contendo um label e um input
     return (
@@ -10,7 +17,7 @@ const CampoTexto = (props) => {
             <label>
                 {props.label} 
             </label>
-            <input required={props.obrigatorio}  placeholder={props.placeholder}/>
+            <input value={valor} onChange={aoDigitado} required={props.obrigatorio}  placeholder={props.placeholder}/>
         </div>
     )
 }
