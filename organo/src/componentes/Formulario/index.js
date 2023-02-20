@@ -8,7 +8,7 @@ import ListaSuspensa from '../ListaSuspensa';
 import './Fomulario.css';
 
 // Definição da componente Formulario como uma função sem parâmetros
-const Formulario = () => {
+const Formulario = (props) => {
 
   
   // Array de strings com as opções para a ListaSuspensa
@@ -28,7 +28,9 @@ const Formulario = () => {
 
   const aoSalvar = (evento) => {
     evento.preventDefault()
-    console.log('form foi submetido => ', nome, cargo, imagem, time)
+    props.aoColaboradorCadastrado({
+      nome,cargo,imagem,time
+    })
   }
 
   // Retorno da componente, que consiste em um formulário com vários campos, incluindo os componentes CampoTexto e ListaSuspensa
