@@ -21,8 +21,15 @@ const Formulario = (props) => {
   const aoSalvar = (evento) => {
     evento.preventDefault()
     props.aoColaboradorCadastrado({
-      nome,cargo,imagem,time
+      nome,
+      cargo,
+      imagem,
+      time
     })
+    setNome('')
+    setCargo('')
+    setImagem('')
+    setTime('')
   }
 
   // Retorno da componente, que consiste em um formulário com vários campos, incluindo os componentes CampoTexto e ListaSuspensa
@@ -47,8 +54,8 @@ const Formulario = (props) => {
         <CampoTexto 
           label="Imagem" 
           placeholder="Digite o enderço da imagem"
-          valor={imagem}
-          aoAlterado={valor => setImagem(valor)} 
+          valor={imagem }
+          aoAlterado={valor => setImagem(valor + ".png")} 
         />
         <ListaSuspensa 
           obrigatorio={true} 
