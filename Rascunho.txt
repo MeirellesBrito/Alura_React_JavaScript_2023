@@ -1,0 +1,2 @@
+1º passo - npx create-react-app organo  
+2º passo - npm start
