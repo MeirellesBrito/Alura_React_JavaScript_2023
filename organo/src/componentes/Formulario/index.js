@@ -12,15 +12,7 @@ const Formulario = (props) => {
 
   
   // Array de strings com as opções para a ListaSuspensa
-  const times=[
-    'Programacao',
-    'front-End',
-    'Data science',
-    'Devops',
-    'UX e Design',
-    'Mobile',
-    'Inovaxao e Gestao'
-  ]
+  
   const [nome, setNome] = useState('')
   const [cargo, setCargo] = useState('')
   const [imagem, setImagem] = useState('')
@@ -61,7 +53,7 @@ const Formulario = (props) => {
         <ListaSuspensa 
           obrigatorio={true} 
           label="Time" 
-          itens={times}
+          itens={props.times}
           valor={time}
           aoAlterado={valor => setTime(valor)}
         />
