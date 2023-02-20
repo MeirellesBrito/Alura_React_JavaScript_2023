@@ -8,14 +8,13 @@ import Time from './componentes/Time';
 function App() {
 
   const times = [
-    {
+     {
       nome: 'Programacao',
       corPrimaria: '#57C278',
       corSecundaria: '#D9F7E9'
     },
     {
       nome: 'front-End',
-
       corPrimaria: '#82CFFA',
       corSecundaria: '#E8F8FF'
     },

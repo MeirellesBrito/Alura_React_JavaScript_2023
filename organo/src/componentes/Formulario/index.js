@@ -52,7 +52,7 @@ const Formulario = (props) => {
           aoAlterado={valor => setCargo(valor)}
         />
         <CampoTexto 
-          label="Imagem" 
+          label="URL do Github" 
           placeholder="Digite o enderço da imagem"
           valor={imagem }
           aoAlterado={valor => setImagem(valor + ".png")} 
