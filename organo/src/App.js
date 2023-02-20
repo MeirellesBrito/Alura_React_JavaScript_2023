@@ -6,6 +6,45 @@ import Time from './componentes/Time';
 
 // Definição da função App, que não recebe parâmetros
 function App() {
+
+  const times = [
+    {
+      nome: 'Programacao',
+      corPrimaria: '#57C278',
+      corSecundaria: '#D9F7E9'
+    },
+    {
+      nome: 'front-End',
+
+      corPrimaria: '#82CFFA',
+      corSecundaria: '#E8F8FF'
+    },
+    {
+      nome: 'Data science',
+      corPrimaria: '#A6D157',
+      corSecundaria: '#F0F8E2'
+    },
+    {
+      nome: 'Devops',
+      corPrimaria: '#E06869',
+      corSecundaria: '#FDE7E8'
+    },
+    {
+      nome: 'UX e Design',
+      corPrimaria: '#D86EBF',
+      corSecundaria: '#FAE9F9'
+    },
+    {
+      nome: 'Mobile',
+      corPrimaria: '#FFBA05',
+      corSecundaria: '#FFF5D9'
+    },
+    {
+      nome: 'Inovaxao e Gestao',
+      corPrimaria: '#FF8A29',
+      corSecundaria: '#FFEEDF'
+    },
+  ]
   
   const [colaboradores, setColaboradores] = useState([])
 
@@ -21,10 +60,9 @@ function App() {
     <div className="App">
       <Banner />
       <Formulario aoColaboradorCadastrado= {colaborador => aoNovoColaboradorAdicionado(colaborador)} />
-      <Time nome="Programacao"/>
-      <Time nome="frontend"/>
-      <Time nome="Data Science"/>
-      <Time nome="fDevops"/>
+      {times.map(time => <Time key={time.nome} nome={time.nome} corPrimaria={time.corPrimaria} corSecundaria={time.corSecundaria}/>)}
+      
+      
     </div>
   );
 }
