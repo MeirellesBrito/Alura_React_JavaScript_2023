@@ -11,7 +11,7 @@ const ListaSuspensa = (props)  => {
     return(
         <div className="lista-suspensa"> 
             <label>{props.label}</label>
-            <select>
+            <select required={props.required}>
                 {/* Loop que percorre os itens da propriedade "itens" e cria uma opção "option" para cada um */}
                 {props.itens.map(item => {
                     return <option key={item}>{item}</option>
